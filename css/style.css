@@ -1,0 +1,148 @@
+:root {
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* Accent */
+  --blue: hsl(248, 32%, 49%);
+  /* Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('../images/bg-intro-desktop.png'), var(--red);
+  background-position: top;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  /* background-color: aqua; */
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.left .heading {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.left .paragraph {
+  font-size: 1.2rem;
+  margin-right: 4rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  flex: 0 0 50%;
+}
+
+.right .cta {
+  display: inline-block;
+  padding: 1.6rem;
+  width: 85%;
+  border: none;
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.right .cta span {
+  font-weight: 700;
+}
+
+.right .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.right form input:not(:last-of-type) {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ececec;
+}
+
+.right form input::-webkit-input-placeholder {
+  font-weight: 700;
+}
+
+.right form input:focus:not(:last-of-type) {
+  border: 1px solid var(--blue);
+}
+
+.right form .submit-btn {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--green);
+}
+
+.right form .terms {
+  display: inline;
+  color: #c9c5d6;
+}
+
+.right form .terms span {
+  color: var(--red);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background: url('../images/bg-intro-mobile.png'), var(--red);
+    background-position: top;
+    background-size: cover;
+  }
+  main {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
